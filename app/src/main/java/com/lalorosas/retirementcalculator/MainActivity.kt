@@ -9,7 +9,7 @@ import com.microsoft.appcenter.crashes.Crashes
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        AppCenter.start(application, "4c224023-b4c3-42d6-92a0-d5f3c22d3199", Analytics::class.java, Crashes::class.java);
+        AppCenter.start(
+            application,
+            "4c224023-b4c3-42d6-92a0-d5f3c22d3199",
+            Analytics::class.java,
+            Crashes::class.java
+        );
 
         binding.calculateButton.setOnClickListener {
             // Crashes.generateTestCrash()
@@ -29,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 val monthly = binding.monthlySavingsEditText.text.toString().toFloat()
                 val current = binding.currentEditText.text.toString().toFloat()
 
-                val properties:HashMap<String, String> = HashMap<String, String>()
+                val properties: HashMap<String, String> = HashMap<String, String>()
                 properties.put("interest_rate", interestRate.toString())
                 properties.put("current_age", currentAge.toString())
                 properties.put("retirement_age", retirementAge.toString())
@@ -42,7 +47,11 @@ class MainActivity : AppCompatActivity() {
                 if (retirementAge <= currentAge) {
                     Analytics.trackEvent("wrong_age", properties)
                 }
-            } catch(ex: Exception){
+
+                binding.resultTextView.text =
+                    "At the current rate of $interestRate, with your current monthly savings you will have $monthly by $retirementAge."
+                
+            } catch (ex: Exception) {
                 Analytics.trackEvent(ex.message)
             }
         }
