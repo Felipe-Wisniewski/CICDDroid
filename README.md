@@ -1,5 +1,5 @@
-dev: [![Build status](https://build.appcenter.ms/v0.1/apps/a30b249e-89bb-4814-bcfc-b42688ba6182/branches/dev/badge)](https://appcenter.ms)
+dev: [![Build status](https://build.appcenter.ms/v0.1/apps/15cabb21-6245-45e6-8927-e5a4ec8fbff1/branches/dev/badge)](https://appcenter.ms)
 
-test: [![Build status](https://build.appcenter.ms/v0.1/apps/a30b249e-89bb-4814-bcfc-b42688ba6182/branches/test/badge)](https://appcenter.ms)
+test: [![Build status](https://build.appcenter.ms/v0.1/apps/15cabb21-6245-45e6-8927-e5a4ec8fbff1/branches/test/badge)](https://appcenter.ms)
 
-master: [![Build status](https://build.appcenter.ms/v0.1/apps/a30b249e-89bb-4814-bcfc-b42688ba6182/branches/master/badge)](https://appcenter.ms)
+master: [![Build status](https://build.appcenter.ms/v0.1/apps/15cabb21-6245-45e6-8927-e5a4ec8fbff1/branches/master/badge)](https://appcenter.ms)
